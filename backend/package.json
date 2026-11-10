@@ -1,0 +1,32 @@
+{
+  "name": "pi-class-api",
+  "version": "1.0.0",
+  "description": "π-class — backend API for the Mauritanian students learning app",
+  "main": "src/server.js",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "db:init": "psql \"$DATABASE_URL\" -v ON_ERROR_STOP=1 -f db/schema.sql -f db/seed.sql",
+    "create-admin": "node scripts/create-admin.js",
+    "db:migrate": "node scripts/migrate.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1163.0",
+    "@aws-sdk/s3-request-presigner": "^3.1163.0",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-rate-limit": "^7.4.1",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.13.1",
+    "pino": "^9.5.0",
+    "pino-http": "^10.3.0",
+    "zod": "^3.23.8"
+  }
+}

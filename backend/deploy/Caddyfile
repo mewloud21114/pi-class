@@ -1,0 +1,16 @@
+# Caddy gets and renews the HTTPS certificate for $DOMAIN automatically.
+{$DOMAIN} {
+	encode zstd gzip
+
+	# Only JSON goes through here; videos and PDFs go straight to storage.
+	request_body {
+		max_size 2MB
+	}
+
+	reverse_proxy api:3000
+}
+
+# Uncomment once a DNS record exists for www as well:
+# www.{$DOMAIN} {
+# 	redir https://{$DOMAIN}{uri} permanent
+# }

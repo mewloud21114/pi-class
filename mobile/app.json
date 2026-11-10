@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "π-class",
+    "slug": "pi-class",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "mr.piclass.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "package": "mr.piclass.app"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "output": "single",
+      "bundler": "metro",
+      "name": "π-class",
+      "shortName": "π-class",
+      "themeColor": "#0F7B4F",
+      "backgroundColor": "#F4F6F5",
+      "lang": "fr"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-status-bar",
+      "expo-secure-store",
+      "expo-video",
+      "expo-web-browser"
+    ],
+    "scheme": "piclass"
+  }
+}
